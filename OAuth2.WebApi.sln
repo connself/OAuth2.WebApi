@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuth2.WebApi", "src\OAuth2.WebApi\OAuth2.WebApi.csproj", "{4BEDFACA-19A7-4CAB-9BB6-D7478E8DF7C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuth2.WebApi.Tests", "OAuth2.WebApi.Tests\OAuth2.WebApi.Tests.csproj", "{7ACE1322-0A18-4999-AA87-85660848341B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuth2.WebApi.Tests", "src\OAuth2.WebApi.Tests\OAuth2.WebApi.Tests.csproj", "{7ACE1322-0A18-4999-AA87-85660848341B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

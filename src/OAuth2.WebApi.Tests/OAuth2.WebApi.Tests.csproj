@@ -70,7 +70,7 @@
     <Compile Include="TokenResponse.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\OAuth2.WebApi\OAuth2.WebApi.csproj">
+    <ProjectReference Include="..\OAuth2.WebApi\OAuth2.WebApi.csproj">
       <Project>{4BEDFACA-19A7-4CAB-9BB6-D7478E8DF7C4}</Project>
       <Name>OAuth2.WebApi</Name>
     </ProjectReference>

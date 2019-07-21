@@ -1,30 +1,29 @@
 ﻿using Microsoft.Owin;
 using Microsoft.Owin.Cors;
-using Microsoft.Owin.Security;
-using Microsoft.Owin.Security.DataHandler.Encoder;
-using Microsoft.Owin.Security.Jwt;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
-using Swashbuckle.Application;
 using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Web;
 using System.Web.Http;
 
 [assembly: OwinStartup(typeof(OAuth2.WebApi.Startup))]
 namespace OAuth2.WebApi
 {
+    /// <summary>
+    /// Startup
+    /// </summary>
     public class Startup
     {
+        /// <summary>
+        /// Configuration
+        /// </summary>
+        /// <param name="app"></param>
         public void Configuration(IAppBuilder app)
         {
             HttpConfiguration configuration = new HttpConfiguration();
             WebApiConfig.Register(configuration);
             SwaggerConfig.Register(configuration);
 
-            app.UseCors(CorsOptions.AllowAll);
+            ConfigCors(app);
 
             ConfigAuth(app);
 
@@ -32,6 +31,19 @@ namespace OAuth2.WebApi
             app.UseWebApi(configuration);
         }
 
+        /// <summary>
+        /// ConfigCors
+        /// </summary>
+        /// <param name="app"></param>
+        public void ConfigCors(IAppBuilder app)
+        {
+            app.UseCors(CorsOptions.AllowAll);
+        }
+
+        /// <summary>
+        /// ConfigAuth
+        /// </summary>
+        /// <param name="app"></param>
         public void ConfigAuth(IAppBuilder app)
         {
             OAuthAuthorizationServerOptions option = new OAuthAuthorizationServerOptions()
